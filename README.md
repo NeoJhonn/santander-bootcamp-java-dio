@@ -105,3 +105,7 @@ classDiagram
     User "1" *-- "1" Card
     User "1" *-- "N" News
 ```
+
+## [Link do Figma](https://www.figma.com/design/0ZsjwjsYlYd3timxqMWlbj/SANTANDER---Projeto-Web%2FMobile?node-id=1421-432)
+- O Figma foi utilizado para a abstração do domínio desta API, sendo útil na análise e projeto da solução.
+
