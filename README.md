@@ -73,7 +73,7 @@ o nome das classes em inglês:
 
 ## Diagrama de Classes com [Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
-``` mermaid
+```mermaid
 classDiagram
     class User {
         +String name
@@ -108,4 +108,3 @@ classDiagram
     User "1" *-- "N" Feature
     User "1" *-- "1" Card
     User "1" *-- "N" News
-```
