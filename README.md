@@ -19,12 +19,10 @@
       "description": "decrição da feature"
     }
   ],
-  "card": [
-    {
+  "card": {
       "number": "xxxx xxxx xxxx xxxx",
       "limit": 1000.00
-    }
-  ],
+  },
   "news": [
     {
       "icon": "URL",
@@ -54,12 +52,10 @@ o nome das classes em inglês:
       "description": "decrição da feature"
     }
   ],
-  "card": [
-    {
+  "card": {
       "number": "xxxx xxxx xxxx xxxx",
       "limit": 1000.00
-    }
-  ],
+  },
   "news": [
     {
       "icon": "URL",
@@ -73,14 +69,14 @@ o nome das classes em inglês:
 
 ## Diagrama de Classes com [Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
 
-``` mermaid
+```mermaid
 classDiagram
     class User {
         +String name
         +Account account
-        +List~Feature~ features
-        +List~Card~ card
-        +List~News~ news
+        +Feature[] features
+        +Card card
+        +News[] news
 
     class Account {
         +String number
