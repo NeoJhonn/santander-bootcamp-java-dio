@@ -1,4 +1,4 @@
-# Adicionar viriável de ambiente em configuratio= SPRING_PROFILES_ACTIVE=dev
+# Adicionar viriável de ambiente em configuration do IntelliJ= SPRING_PROFILES_ACTIVE=tst
 spring:
   datasource:
     url: jdbc:h2:mem:sbj2024

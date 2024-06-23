@@ -1,3 +1,4 @@
+# Adicionar viriável de ambiente em configuration do IntelliJ= SPRING_PROFILES_ACTIVE=prd
 spring:
   datasource:
     url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}

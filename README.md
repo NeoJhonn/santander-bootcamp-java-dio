@@ -1,6 +1,12 @@
 # Bootcamp Java Santander Dio
 
 - Java RESTful API criada para Bootcamp Java Santander Dio 2024.
+- Minhas melhorias na aplicação:
+  - Tratada todas as exeções.
+  - Adicionado conecxão local com o Postgres.
+  - ModelMapper para mapear as entidades para DTO.
+  - Crud completo de User.
+  - Criado perfis yml  "application-test.yml" e "application-dev.yml".
 - Link para criação do projeto no [Spring Initializr](https://start.spring.io/#!type=gradle-project&language=java&platformVersion=3.3.1&packaging=jar&jvmVersion=17&groupId=br.com.jhonny_azevedo&artifactId=santander-bootcamp-java-dio&name=santander-bootcamp-java-dio&description=Java%20RESTfull%20API%20criada%20para%20Bootcamp%20Java%20Santander%20Dio%202024&packageName=br.com.jhonny_azevedo.bootcamp_java_dio&dependencies=web,data-jpa,postgresql,h2).
 - Acesse [JSON Editor Online](https://jsoneditoronline.org/) e faça a abstração do JSON do projeto:
 
@@ -116,7 +122,7 @@ classDiagram
 você pode usar o arquivo ".yml" conferme exemplo do "application-dev.yml" abaixo:
 
 ```
-# Adicionar viriável de ambiente em configuratio= SPRING_PROFILES_ACTIVE=dev
+# Adicionar viriável de ambiente em configuration do IntelliJ= SPRING_PROFILES_ACTIVE=tst
 spring:
   datasource:
     url: jdbc:h2:mem:sbj2024
@@ -137,10 +143,29 @@ spring:
       settings:
         trace: false
         web-allow-others: false
+
+---------------------------------------------------------------------
+
+# Adicionar viriável de ambiente em configuration do IntelliJ= SPRING_PROFILES_ACTIVE=dev
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dio-database?currentSchema=public
+    username: postgres
+    password: 368091
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update # validate | update | create | create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: public
         
 -------------------------------------------------------------------
 
-# Adicionar viriável de ambiente em configuratio= SPRING_PROFILES_ACTIVE=prd
+# Adicionar viriável de ambiente em configuration do IntelliJ= SPRING_PROFILES_ACTIVE=prd
 spring:
   datasource:
     url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
