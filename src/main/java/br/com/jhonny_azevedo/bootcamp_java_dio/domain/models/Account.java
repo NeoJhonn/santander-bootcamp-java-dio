@@ -23,9 +23,9 @@ public class Account {
 
     private String agency;
 
-    @Column(scale = 13, precision = 2)// 11 inteiros e 2 decimais de precisão
+    @Column(precision = 13, scale = 2)// 11 inteiros e 2 decimais de precisão
     private BigDecimal balance;
 
-    @Column(name = "account_limit", scale = 13, precision = 2)// 11 inteiros e 2 decimais de precisão
+    @Column(name = "account_limit", precision = 13, scale = 2)// 11 inteiros e 2 decimais de precisão
     private BigDecimal limit;
 }

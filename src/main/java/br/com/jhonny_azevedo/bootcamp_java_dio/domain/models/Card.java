@@ -21,6 +21,6 @@ public class Card {
     @Column(unique = true)
     private String number;
 
-    @Column(name = "card_limit", scale = 13, precision = 2)// 11 inteiros e 2 decimais de precisão
+    @Column(name = "card_limit", precision = 13, scale = 2)// 11 inteiros e 2 decimais de precisão
     private BigDecimal limit;
 }
