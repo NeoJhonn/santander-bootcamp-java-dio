@@ -1,17 +1,15 @@
-package br.com.jhonny_azevedo.bootcamp_java_dio.domain.controller;
+package br.com.jhonny_azevedo.bootcamp_java_dio.controller;
 
 import java.net.URI;
 import java.util.UUID;
 import java.util.NoSuchElementException;
 
 import br.com.jhonny_azevedo.bootcamp_java_dio.domain.models.User;
-import br.com.jhonny_azevedo.bootcamp_java_dio.domain.sevice.impl.UserService;
+import br.com.jhonny_azevedo.bootcamp_java_dio.sevice.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/users")

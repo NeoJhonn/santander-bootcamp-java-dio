@@ -1,4 +1,4 @@
-package br.com.jhonny_azevedo.bootcamp_java_dio.domain.controller.exception;
+package br.com.jhonny_azevedo.bootcamp_java_dio.controller.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
