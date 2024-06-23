@@ -137,6 +137,19 @@ spring:
       settings:
         trace: false
         web-allow-others: false
+        
+-------------------------------------------------------------------
+
+# Adicionar viriável de ambiente em configuratio= SPRING_PROFILES_ACTIVE=prd
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
 ```
 
 ## Adicionando Swagger como dependência no arquivo build.gradle
@@ -146,4 +159,18 @@ spring:
 ```
 // OpenAPI (Swagger) https://github.com/springdoc/springdoc-openapi
 implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+```
+
+- Correção de Cors com Swagger: para não ter problemas ao acessar o Swagger em produção para testar sua api
+adicione a seguinte configuração:
+
+```
+@OpenAPIDefinition(servers = { @Server(url = "/", description = "Default Server URL")}) <------------------------
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
 ```
