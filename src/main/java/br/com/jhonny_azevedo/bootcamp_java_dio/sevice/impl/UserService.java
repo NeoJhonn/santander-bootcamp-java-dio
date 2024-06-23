@@ -21,6 +21,11 @@ public class UserService implements IUserService {
         if (userRepository.existsByAccountNumber(user.getAccount().getNumber())) {
             throw new IllegalArgumentException("Já existe um usuário com esse número de conta.");
         }
+
+        if (userRepository.existsByCardNumber(user.getCard().getNumber())) {
+            throw new IllegalArgumentException("Já existe um usuário com esse número de cartão.");
+        }
+
         return userRepository.save(user);
     }
 
@@ -31,7 +36,8 @@ public class UserService implements IUserService {
 
     @Override
     public User update(User user) {
-        User useToUpdate = userRepository.findById(user.getId()).orElseThrow(() -> new NoSuchElementException("Usuário não encontrado."));
+        // verificar se o usuário existe
+        userRepository.findById(user.getId()).orElseThrow(() -> new NoSuchElementException("Usuário não encontrado."));
 
         return userRepository.save(user);
     }
@@ -39,6 +45,8 @@ public class UserService implements IUserService {
     @Override
     public void delete(UUID id) {
         User userToDelete = userRepository.findById(id).orElseThrow(() -> new NoSuchElementException("Usuário não encontrado."));
+
+        userRepository.delete(userToDelete);
     }
 
     @Override
