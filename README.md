@@ -109,3 +109,33 @@ classDiagram
 ## [Link do Figma](https://www.figma.com/design/0ZsjwjsYlYd3timxqMWlbj/SANTANDER---Projeto-Web%2FMobile?node-id=1421-432)
 - O Figma foi utilizado para a abstração do domínio desta API, sendo útil na análise e projeto da solução.
 
+## Usando arquivo .yml para gerenciar perfis no Spring
+
+
+- Ao invés de usar o arquivo "aplication.properties" para gerenciar os perfis e configurações do seu projeto
+você pode usar o arquivo ".yml" conferme exemplo do "application-dev.yml" abaixo:
+
+```
+# Adicionar viriável de ambiente em configuratio= SPRING_PROFILES_ACTIVE=dev
+spring:
+  datasource:
+    url: jdbc:h2:mem:sbj2024
+    username: sbj2024
+    password:
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update # validate | update | create | create-drop
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+```
+
