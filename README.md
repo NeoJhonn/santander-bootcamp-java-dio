@@ -3,7 +3,7 @@
 - Java RESTful API criada para Bootcamp Java Santander Dio 2024.
 - Minhas melhorias na aplicação:
   - Tratada todas as exeções.
-  - Adicionado conecxão local com o Postgres.
+  - Adicionado conexão local com o Postgres.
   - ModelMapper para mapear as entidades para DTO.
   - Crud completo de User.
   - Criado perfis yml  "application-test.yml" e "application-dev.yml".
