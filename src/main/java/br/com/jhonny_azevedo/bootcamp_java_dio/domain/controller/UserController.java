@@ -23,7 +23,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<Object> createUser(@RequestBody User user) {
 
-        try {
+
             User userCreated = userService.create(user);
 
             // você pode incluir junto o local de criação no ResponseEntity
@@ -32,9 +32,7 @@ public class UserController {
                     .toUri();
 
             return ResponseEntity.created(location).body(userCreated);
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+
     }
 
     @GetMapping("/{id}")
