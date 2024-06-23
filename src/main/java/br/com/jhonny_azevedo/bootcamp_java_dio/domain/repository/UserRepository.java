@@ -1,4 +1,4 @@
-package br.com.jhonny_azevedo.bootcamp_java_dio.domain.repositories;
+package br.com.jhonny_azevedo.bootcamp_java_dio.domain.repository;
 
 import br.com.jhonny_azevedo.bootcamp_java_dio.domain.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;

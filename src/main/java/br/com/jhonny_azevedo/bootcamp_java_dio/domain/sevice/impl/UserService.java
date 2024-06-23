@@ -1,7 +1,7 @@
 package br.com.jhonny_azevedo.bootcamp_java_dio.domain.sevice.impl;
 
 import br.com.jhonny_azevedo.bootcamp_java_dio.domain.models.User;
-import br.com.jhonny_azevedo.bootcamp_java_dio.domain.repositories.UserRepository;
+import br.com.jhonny_azevedo.bootcamp_java_dio.domain.repository.UserRepository;
 import br.com.jhonny_azevedo.bootcamp_java_dio.domain.sevice.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

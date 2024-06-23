@@ -139,3 +139,11 @@ spring:
         web-allow-others: false
 ```
 
+## Adicionando Swagger como dependência no arquivo build.gradle
+
+- [Documentação OpenAPI Swagger](https://github.com/springdoc/springdoc-openapi).
+
+```
+// OpenAPI (Swagger) https://github.com/springdoc/springdoc-openapi
+implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+```
